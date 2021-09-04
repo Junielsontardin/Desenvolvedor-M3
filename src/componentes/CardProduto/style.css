@@ -1,0 +1,41 @@
+.container-produto {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-bottom: 5%;
+    margin-right: 3%;
+}
+
+.container-informacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+.preco {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 12px;
+}
+
+.parcela {
+    font-size: 10px;
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+.botao-comprar {
+    background-color: #000;
+    color: #FFF;
+    font-weight: 800;
+    border-style: none;
+    height: 30px;
+    cursor: pointer
+}

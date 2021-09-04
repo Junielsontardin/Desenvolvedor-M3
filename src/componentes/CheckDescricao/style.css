@@ -1,0 +1,25 @@
+.check-descricao input{
+    display: none;
+}
+
+.check-descricao input + label:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: white;
+    border: 1px solid gray;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.check-descricao input:checked + label:before {
+    background-color:aqua
+}
+
+.descricao {
+    cursor: pointer;
+}

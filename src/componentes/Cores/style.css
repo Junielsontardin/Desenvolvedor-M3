@@ -1,0 +1,12 @@
+div h2:first-child {
+    font-weight: 400;
+    margin-bottom: 7px;
+    margin-top: 0;
+}
+
+.todas-cores {
+    color: #DCDCDC;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 5px;
+}

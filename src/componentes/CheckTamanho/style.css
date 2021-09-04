@@ -1,0 +1,32 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D3D3D3;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+.tamanho {
+    font-size: 20px;
+    color: #d3d3d3;
+}
+
+.box-clicked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-width: 1px;
+    border-style: solid;
+    border-color:blue;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    color: #000;
+}

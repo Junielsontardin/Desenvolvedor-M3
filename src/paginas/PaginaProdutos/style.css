@@ -1,0 +1,15 @@
+.container-principal {
+    display: flex;
+    justify-content: center;
+}
+
+.container-produtos {
+    width: 35%;
+    margin-left: 5%;
+}
+
+.lista-produtos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

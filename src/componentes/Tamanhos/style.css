@@ -1,0 +1,9 @@
+.container-tamanhos {
+    margin-bottom: 10%;
+}
+
+.row-tamanhos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
