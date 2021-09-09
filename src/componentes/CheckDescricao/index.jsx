@@ -1,5 +1,4 @@
-import React, { useContext, useState } from 'react';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import React from 'react';
 import './style.css'
 
 const CheckDescricao = ( props ) => {

@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react';
 import CheckDescricao from '../CheckDescricao';
 import './style.css'
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 
 
-const Cores = ({ filtro, mobile, arrayFiltro }) => {
+const Cores = ({ filtro, mobile }) => {
 
     const [mostrar, setMostrar] = useState(false);
 
@@ -19,7 +19,7 @@ const Cores = ({ filtro, mobile, arrayFiltro }) => {
     const [checkedRosa, setCheckedRosa] = useState(false);
     const [checkedVinho, setCheckedVinho] = useState(false);
 
-    const { cores } = useContext(CarrinhoContext)
+    const { cores } = useContext(EcommerceContext)
     
 
 

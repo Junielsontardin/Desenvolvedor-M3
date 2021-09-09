@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 import './style.css'
 
 const InputPesquisa = () => {
 
-    const { pesquisa, setPesquisa } = useContext(CarrinhoContext)
+    const { pesquisa, setPesquisa } = useContext(EcommerceContext)
 
     return (
         <div className="container-input-pesquisa">

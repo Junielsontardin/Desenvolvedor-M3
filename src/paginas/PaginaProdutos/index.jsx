@@ -5,7 +5,7 @@ import FaixaPreco from '../../componentes/FaixaPreco';
 import CardProduto from '../../componentes/CardProduto';
 import './style.css'
 import TopBar from '../../componentes/TopBar';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 import img2 from '../../layout/imagens/img_2.png'
 import img3 from '../../layout/imagens/img_3.png'
 import img4 from '../../layout/imagens/img_4.png'
@@ -56,7 +56,7 @@ const PaginaProdutos = () => {
             id: 4,
             nomeProduto: 'CARDIGAN OFF WHITE',
             cor: 'Cinza',
-            tamanho: 'M',
+            tamanho: '42',
             preco: '99,00',
             numeroParcela: 3,
             data: '2021-08-18',
@@ -66,7 +66,7 @@ const PaginaProdutos = () => {
             id: 5,
             nomeProduto: 'BODY LEOPARDO',
             cor: 'Laranja',
-            tamanho: 'M',
+            tamanho: '36',
             preco: '129,90',
             numeroParcela: 3,
             data: '2021-09-05',
@@ -76,7 +76,7 @@ const PaginaProdutos = () => {
             id: 6,
             nomeProduto: 'CASACO PELOS',
             cor: 'Verde',
-            tamanho: 'M',
+            tamanho: '38',
             preco: '398,00',
             numeroParcela: 5,
             data: '2021-02-01',
@@ -125,7 +125,7 @@ const PaginaProdutos = () => {
         tamanhos, setTamanhos,
         precos, setPrecos,
         ordenar, setOrdenar,
-        pesquisa, setPesquisa } = useContext(CarrinhoContext)
+        pesquisa, setPesquisa } = useContext(EcommerceContext)
 
     const [width, setWidth] = useState(window.innerWidth);
 

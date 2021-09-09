@@ -4,7 +4,7 @@ import Cores from '../Cores'
 import Tamanhos from '../Tamanhos';
 import FaixaPreco from '../FaixaPreco';
 import IconeFechar from '../../layout/imagens/icon-x.png';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 import InputPesquisa from '../InputPesquisa';
 
 const TopBar = ({ mobile }) => {
@@ -12,7 +12,7 @@ const TopBar = ({ mobile }) => {
     const [clickedFilter, setClickedFilter] = useState(false);
     const [clickedOrder, setClickedOrder] = useState(false)
 
-    const { setCores, setPrecos, setTamanhos, setOrdenar, pesquisa, setPesquisa } = useContext(CarrinhoContext)
+    const { setCores, setPrecos, setTamanhos, setOrdenar } = useContext(EcommerceContext)
 
     const limparFiltros = () => {
         setCores([])
@@ -33,8 +33,8 @@ const TopBar = ({ mobile }) => {
                     <h1 className="titulo-item">Blusas</h1>
                     <div>
                         <div>
-                            <select onChange={(e) => setOrdenar(e.target.value)} className="select">
-                                <option disabled selected value="recente">Ordenar por:</option>
+                            <select defaultValue="default" onChange={(e) => setOrdenar(e.target.value)} className="select">
+                                <option disabled value="default">Ordenar por:</option>
                                 <option value="recente">Mais recentes</option>
                                 <option value="menor">Menor preço</option>
                                 <option value="maior">Maior preço</option>
@@ -61,7 +61,7 @@ const TopBar = ({ mobile }) => {
                     <div>
                         <div className="container-titulo-filtrar">
                             <h2 className="titulo-filtrar">FILTRAR</h2>
-                            <img onClick={() => setClickedFilter(!clickedFilter)} className="icon-fechar" src={IconeFechar} />
+                            <img onClick={() => setClickedFilter(!clickedFilter)} className="icon-fechar" src={IconeFechar} alt=""/>
                         </div>
                         <div className="linha-divisao" />
                         <div>
@@ -72,8 +72,8 @@ const TopBar = ({ mobile }) => {
                     </div>
                     <div className="position-botoes">
                         <div className="container-botoes">
-                            <div className="botao-aplicar">
-                                <p>APLICAR</p>
+                            <div onClick={() => setClickedFilter(!clickedFilter)} className="botao-aplicar">
+                                <p>Aplicar</p>
                             </div>
                             <div onClick={limparFiltros} className="botao-limpar">
                                 <p>LIMPAR</p>
@@ -85,7 +85,7 @@ const TopBar = ({ mobile }) => {
                 <div>
                         <div className="container-titulo-filtrar">
                             <h2 className="titulo-filtrar">ORDENAR</h2>
-                            <img onClick={() => setClickedOrder(!clickedOrder)} className="icon-fechar" src={IconeFechar} />
+                            <img onClick={() => setClickedOrder(!clickedOrder)} className="icon-fechar" src={IconeFechar} alt=""/>
                         </div>
                         <div className="linha-divisao" />
                         <div className="container-opcoes">

@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 import './style.css'
 
 const CardProduto = ({ produto }) => {
 
-    const { setCarrinho } = useContext(CarrinhoContext)
+    const { setCarrinho } = useContext(EcommerceContext)
 
     const adicionarCarrinho = (item) => {
         let arrayCart = JSON.parse(localStorage.getItem("cart"))

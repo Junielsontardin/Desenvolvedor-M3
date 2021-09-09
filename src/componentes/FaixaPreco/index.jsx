@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import CheckDescricao from '../CheckDescricao';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 import './style.css';
 
 const FaixaPreco = ({ filtro, mobile }) => {
@@ -13,7 +13,7 @@ const FaixaPreco = ({ filtro, mobile }) => {
 
     const [mostrar, setMostrar] = useState(false);
 
-    const { precos } = useContext(CarrinhoContext)
+    const { precos } = useContext(EcommerceContext)
 
     useEffect(() => {
 

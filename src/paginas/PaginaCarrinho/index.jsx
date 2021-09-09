@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Footer from '../../componentes/Footer';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 import './style.css'
 
 
 const PaginaCarrinho = () => {
 
-    const { carrinho, setCarrinho } = useContext(CarrinhoContext)
+    const { carrinho, setCarrinho } = useContext(EcommerceContext)
     const [precoTotal, setPrecoTotal] = useState(0)
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const PaginaCarrinho = () => {
         let arrayProdutoRemovido = []
         let arrayCarrinho = JSON.parse(localStorage.getItem('cart'))
         arrayCarrinho.forEach(item => {
-            if (item.id != id) {
+            if (item.id !== id) {
                 arrayProdutoRemovido.push(item)
             }
         })
@@ -50,8 +50,8 @@ const PaginaCarrinho = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {carrinho.map((item, index) =>
-                            <tr>
+                        {carrinho.map((item) =>
+                            <tr key={item.id}>
                                 <td>{item.nomeProduto}</td>
                                 <td>{item.preco}</td>
                                 <td>

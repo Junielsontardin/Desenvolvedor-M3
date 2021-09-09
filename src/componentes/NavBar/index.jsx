@@ -4,13 +4,13 @@ import Bag from '../../layout/imagens/shopping-bag.png'
 import { Link } from 'react-router-dom'
 import './style.css'
 import { useEffect, useState } from 'react/cjs/react.development';
-import { CarrinhoContext } from '../../context/ContextCarrinho';
+import { EcommerceContext } from '../../context/ContextEcommerce';
 
 const NavBar = () => {
 
     const [itensCarrinho, setItensCarrinho] = useState(0)
 
-    const { carrinho } = useContext(CarrinhoContext);
+    const { carrinho } = useContext(EcommerceContext);
 
     useEffect(() => {
         setItensCarrinho(carrinho.length)
