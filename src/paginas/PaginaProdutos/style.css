@@ -1,15 +1,127 @@
-.container-principal {
+.container {
     display: flex;
     justify-content: center;
 }
 
-.container-produtos {
-    width: 35%;
-    margin-left: 5%;
+.container-principal {
+    width: 70%;
+    display: flex;
 }
 
+.container-produtos {
+    margin-left: 10%;
+    width: 70%
+}
+.container-filtros {
+    width: 30%;
+}
 .lista-produtos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+.container-carregar-mais {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.botao-carregar-mais {
+    margin-left: 3%;
+    width: 25%;
+    height: 40px;
+    background-color: #2bbff2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.botao-carregar-mais p {
+    color: #FFF
+}
+
+@media (max-width: 1080px) {
+    .container-principal {
+        width: 95%;
+        display: flex;
+    }
+    .container-produtos {
+        margin-left: 5%;
+        width: 70%
+    }
+}
+
+@media (max-width: 850px) {
+    .botao-carregar-mais {
+        width: 25%;
+        height: 30px;
+        background-color: #2bbff2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .botao-carregar-mais p {
+        color: #FFF;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container-produtos {
+        margin-left: 5%;
+        width: 90%
+    }
+    .container-filtros {
+        width: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .botao-carregar-mais {
+        width: 35%;
+        height: 30px;
+        background-color: #2bbff2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .botao-carregar-mais p {
+        color: #FFF;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 460px) {
+    .container-principal {
+        width: 100%;
+        display: flex;
+    }
+    .container-produtos {
+        width: 100%;
+        margin-left: 7%
+    }
+    .filtros {
+        display: none;
+    }
+    .container-carregar-mais {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-right: 10%;
+        margin-bottom: 5%;
+    }
+    .botao-carregar-mais {
+        width: 35%;
+        height: 30px;
+        background-color: #2bbff2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+    .botao-carregar-mais p {
+        color: #FFF;
+        font-size: 12px;
+    }
 }

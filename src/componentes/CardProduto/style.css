@@ -1,9 +1,9 @@
 .container-produto {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 30.3%;
     margin-bottom: 5%;
-    margin-right: 3%;
+    margin-left: 3%;
 }
 
 .container-informacoes {
@@ -15,18 +15,18 @@
 .nome {
     margin-top: 5px;
     margin-bottom: 0;
-    font-size: 12px;
+    font-size: 80%;
 }
 
 .preco {
     margin-top: 8px;
     margin-bottom: 0;
     font-weight: 800;
-    font-size: 12px;
+    font-size: 80%;
 }
 
 .parcela {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 0;
     margin-bottom: 7px;
 }
@@ -36,6 +36,104 @@
     color: #FFF;
     font-weight: 800;
     border-style: none;
-    height: 30px;
+    height: 40px;
     cursor: pointer
+}
+
+@media (max-width: 750px) {
+    .nome {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 70%;
+    }
+    
+    .preco {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 70%;
+    }
+    
+    .parcela {
+        font-size: 10px;
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
+    .botao-comprar {
+        background-color: #000;
+        color: #FFF;
+        font-weight: 700;
+        border-style: none;
+        height: 35px;
+        cursor: pointer
+    }
+}
+
+@media (max-width: 616px) {
+    .container-produto {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-bottom: 5%;
+        margin-right: 3%;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    .nome {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 60%;
+    }
+    
+    .preco {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 60%;
+    }
+    
+    .parcela {
+        font-size: 10px;
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
+    .botao-comprar {
+        background-color: #000;
+        color: #FFF;
+        font-weight: 600;
+        border-style: none;
+        height: 30px;
+        cursor: pointer
+    }
+}
+
+
+@media (max-width: 460px) {
+    .container-produto {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        margin-bottom: 5%;
+        margin-right: 3%;
+    }
+    .nome {
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-size: 70%;
+    }
+    
+    .preco {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-weight: 800;
+        font-size: 70%;
+    }
+    
+    .parcela {
+        font-size: 10px;
+        margin-top: 0;
+        margin-bottom: 7px;
+    }
 }

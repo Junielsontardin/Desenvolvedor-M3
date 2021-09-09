@@ -1,4 +1,9 @@
-div h2:first-child {
+.container-cor {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-cor {
     font-weight: 400;
     margin-bottom: 7px;
     margin-top: 0;
@@ -9,4 +14,50 @@ div h2:first-child {
     text-decoration: underline;
     cursor: pointer;
     margin-top: 5px;
+}
+
+.titulo-cor-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 5%;
+}
+.container-select-cores {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.espacamento {
+    margin-top: 4%
+}
+
+@media (max-width: 700px) {
+    .titulo-cor {
+        font-weight: 400;
+        margin-bottom: 7px;
+        margin-top: 0;
+        font-size: 20px;
+    }
+    .todas-cores {
+        color: #DCDCDC;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) {
+    .titulo-cor {
+        font-weight: 400;
+        margin-bottom: 7px;
+        margin-top: 0;
+        font-size: 15px;
+    }
+    .todas-cores {
+        color: #DCDCDC;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-top: 5px;
+        font-size: 12px;
+    }
 }

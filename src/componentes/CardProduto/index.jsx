@@ -1,20 +1,40 @@
-import React from 'react';
-import produto from '../../layout/imagens/img_2.png'
+import React, { useContext } from 'react';
+import { CarrinhoContext } from '../../context/ContextCarrinho';
 import './style.css'
 
-const CardProduto = (props) => {
+const CardProduto = ({ produto }) => {
+
+    const { setCarrinho } = useContext(CarrinhoContext)
+
+    const adicionarCarrinho = (item) => {
+        let arrayCart = JSON.parse(localStorage.getItem("cart"))
+        if(!arrayCart) {
+            let novoCarrinho = []
+            novoCarrinho.push(item)
+            localStorage.setItem("cart", JSON.stringify(novoCarrinho))
+            setCarrinho((prev) => {
+                return [...prev, item]
+            })
+        } else {
+            arrayCart.push(item)
+            localStorage.setItem("cart", JSON.stringify(arrayCart))
+            setCarrinho((prev) => {
+                return [...prev, item]
+            })
+        }
+    }
 
     return (
         <div className="container-produto">
-            <img src={produto} alt=""/>
+            <img src={produto.img} alt=""/>
             <div className="container-informacoes">
-                <p className="nome">{props.nome}</p>
+                <p className="nome">{produto.nomeProduto}</p>
                 <div className="container-informacoes">
-                    <p className="preco">R$ {props.preco}</p>
-                    <p className="parcela">até {props.parcela}x de R${(parseFloat(props.preco) / props.parcela).toFixed(2)}</p>
+                    <p className="preco">R$ {produto.preco}</p>
+                    <p className="parcela">até {produto.numeroParcela}x de R${(parseFloat(produto.preco) / produto.numeroParcela).toFixed(2)}</p>
                 </div>
             </div>
-            <button className="botao-comprar">COMPRAR</button>
+            <button className="botao-comprar" onClick={() => adicionarCarrinho(produto)}>COMPRAR</button>
         </div>
     )
 }

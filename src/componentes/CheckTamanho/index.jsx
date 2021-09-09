@@ -3,10 +3,8 @@ import './style.css'
 
 const CheckTamanho = (props) => {
 
-    const [clicked, setClicked] = useState(false)
-
     return (
-        <div className={clicked ? "box-clicked" : "box"} onClick={() => setClicked(!clicked)}>
+        <div className={props.checked ? "box-clicked" : "box"} onClick={() => props.setChecked(!props.checked)}>
             <p className="tamanho">{props.tamanho}</p>
         </div>
     )
